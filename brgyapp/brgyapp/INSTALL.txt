@@ -1,0 +1,27 @@
+BARANGAY DMS - CITIZEN CAMERA + GPS REPORT FEATURE
+
+1. Run sql/citizen_reports.sql in phpMyAdmin.
+   Database: brgyapp
+
+2. Copy report.php to the ROOT of your existing brgyapp folder.
+
+3. Copy admin/citizen_reports.php into:
+   brgyapp/admin/
+
+4. Copy the uploads/reports folder into:
+   brgyapp/uploads/reports/
+
+5. Open:
+   http://localhost/brgyapp/report.php
+
+6. Add a button/link on your public homepage:
+   <a href="report.php" class="btn btn-danger">Report an Emergency</a>
+
+7. Admin page:
+   http://localhost/brgyapp/admin/citizen_reports.php
+
+IMPORTANT:
+- Camera and GPS require browser permission.
+- For localhost, modern browsers generally allow camera/location.
+- For a deployed website, use HTTPS.
+- The feature does NOT replace your existing incidents table. Admins can review a citizen report and convert it into the existing incidents table.

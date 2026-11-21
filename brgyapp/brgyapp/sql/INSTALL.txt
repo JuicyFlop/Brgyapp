@@ -1,0 +1,26 @@
+BARANGAY DMS - CITIZEN REPORTS V2
+
+INSTALL:
+1. Back up the brgyapp database.
+2. Select the brgyapp database in phpMyAdmin.
+3. Run/import sql/citizen_reports_v2_migration.sql.
+   This repairs older citizen_reports tables, including the missing incident_type column.
+4. Replace brgyapp/admin/citizen_reports.php with the supplied file.
+5. Ensure brgyapp/uploads/reports exists.
+6. Open http://localhost/brgyapp/admin/citizen_reports.php
+
+FEATURES:
+- Total, Pending, Responding and Resolved counters
+- Search
+- Status and incident-type filters
+- Photo preview/full image
+- Detailed report modal
+- Interactive Leaflet/OpenStreetMap GPS map
+- Status and admin notes
+- Convert citizen report into the existing incidents table
+- Delete only reports not yet linked to an official incident
+- Uploaded photo is deleted with a deleted report
+
+This package assumes your existing config/database.php supplies $pdo and your existing
+incidents table uses incident_type, description, location, reported_by, status and incident_date,
+as in your current incidents.php.
